@@ -1,0 +1,42 @@
+<html>
+
+<head>
+
+    <title>Exercicio Modulo 2</title>
+
+</head>
+
+<body>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        /*
+        **3º exercício**
+        A partir do seguinte vetor:
+        ```javascript
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        ```
+        Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+        - Diego  
+        - Gabriel  
+        - Lucas  
+        */
+
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        var listElements = document.querySelector('ul');
+
+        for (nome of nomes) {
+            var travelElements = document.createElement('li');
+            var textElement = document.createTextNode(nome);
+            travelElements.appendChild(textElement);
+            listElements.appendChild(travelElements);
+        }
+
+    </script>
+
+</body>
+
+</html>

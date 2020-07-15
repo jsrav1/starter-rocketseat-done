@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <button onclick="createButton()">Criar Quadrado</button>
+    <div id="box"></div>
+    
+
+
+    <script>
+        function createButton() {
+
+            var boxElement = document.createElement('box')
+
+            boxElement.style.width = 100
+            boxElement.style.height = 100
+            boxElement.style.backgroundColor = "#f00"
+            boxElement.style.margin = 10
+            boxElement.style.display = "inline-block"
+
+            var container = document.getElementById('box')
+            container.appendChild(boxElement)
+        }
+    </script>
+
+</body>
+
+</html>

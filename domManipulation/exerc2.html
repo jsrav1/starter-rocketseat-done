@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <button id="new">GERAR BOTÃO</button>
+    <div id="boxElements"></div>
+
+
+
+    <script>
+
+        var boxElements = document.getElementById('boxElements')
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF"
+            var color = "#"
+            for (var i = 0; i < 6; i++) {
+                color = color + letters[Math.floor(Math.random() * 16)]
+            }
+            return color
+        }
+
+
+
+
+        var buttonElements = document.getElementById('new')
+
+        buttonElements.onclick = function () {
+            var squares = document.createElement('div')
+
+            squares.style.width = 100
+            squares.style.height = 100
+            squares.style.backgroundColor = '#F00'
+            squares.style.display = "inline-block"
+            squares.style.margin = 10
+
+            squares.onmouseover = function () {
+                squares.style.backgroundColor = getRandomColor()
+            }
+
+            boxElements.appendChild(squares)
+        }
+    </script>
+
+</body>
+
+</html>
